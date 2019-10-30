@@ -15,7 +15,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         AdditionalStart();
     }
 
-    protected override void AdditionalStart()
+    protected virtual void AdditionalStart()
     {
 
     }
