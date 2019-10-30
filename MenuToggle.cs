@@ -18,6 +18,13 @@ public class MenuToggle : MonoBehaviour
         {
             _toggle.group = _group;
         }
+
+        AdditionalStart();
+    }
+
+    protectet virtual void AdditionalStart()
+    {
+
     }
 
     protected virtual void SetAction(bool value)
