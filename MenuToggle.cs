@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuToggle : MonoBehaviour
+public class MenuToggle : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     protected GameObject _checkmark;
 
@@ -30,5 +30,25 @@ public class MenuToggle : MonoBehaviour
     protected virtual void SetAction(bool value)
     {
         Debug.Log("set" + value, gameObject);
+    }
+
+    protected virtual void HoverAction()
+    {
+        Debug.Log("hover", gameObject);
+    }
+
+    protected virtual void UnHoverAction()
+    {
+        Debug.Log("unhover", gameObject);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        UnHoverAction();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        HoverAction();
     }
 }
