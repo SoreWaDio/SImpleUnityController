@@ -11,6 +11,13 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         var _button = GetComponent<Button>();
         _button.onClick.AddListener(ClickAction);
         
+
+        AdditionalStart();
+    }
+
+    protected override void AdditionalStart()
+    {
+
     }
 
     protected virtual void ClickAction()
